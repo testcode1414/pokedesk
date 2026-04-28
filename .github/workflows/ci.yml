@@ -37,4 +37,8 @@ jobs:
 
       - name:  Build Docker Image
         run: |
+          docker build -t sumitduwal904/pokedesk .
+
+      - name: Push docker image
+        run:  |
           docker push sumitduwal904/pokedesk
