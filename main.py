@@ -21,7 +21,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+#this is feat
 FEATURED = ["pikachu", "charizard", "mewtwo", "bulbasaur", "squirtle", "eevee"]
 # AI_API_KEY = os.getenv("AI_API_KEY")
 
