@@ -1,11 +1,27 @@
-name: My First WorkFlow
+name: Pokedesk Backend
 
-on: push
+on:
+  push:
+    branches: ["main"]
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say hello
-        run: echo "Hello Sumit"
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup python
+        uses: actions/setup=python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirement.txt
+
+      - name: Run test
+        run:  |
+          pytest -v
+          
