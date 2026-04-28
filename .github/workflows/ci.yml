@@ -8,6 +8,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      AI_API_KEY: ${{ secrets.AI_API_KEY }}
+
     steps:
       - name: checkout code
         uses: actions/checkout@v4
@@ -24,4 +27,7 @@ jobs:
       - name: Run test
         run:  |
           pytest -v
+    
+    
+  
           

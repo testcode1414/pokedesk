@@ -23,7 +23,7 @@ app.add_middleware(
 )
 
 FEATURED = ["pikachu", "charizard", "mewtwo", "bulbasaur", "squirtle", "eevee"]
-AI_API_KEY = os.getenv("AI_API_KEY")
+# AI_API_KEY = os.getenv("AI_API_KEY")
 
 AI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={AI_API_KEY}"
 
